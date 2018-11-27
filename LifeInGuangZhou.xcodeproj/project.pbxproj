@@ -374,7 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.weisun.LifeInGuangZhou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-				VERSIONING_SYSTEM = "apple-generic";
+				VERSIONING_SYSTEM = "";
 			};
 			name = Debug;
 		};
@@ -393,7 +393,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.weisun.LifeInGuangZhou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-				VERSIONING_SYSTEM = "apple-generic";
+				VERSIONING_SYSTEM = "";
 			};
 			name = Release;
 		};
