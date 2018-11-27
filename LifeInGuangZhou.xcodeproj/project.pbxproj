@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B6467A9B21ACF4940047E1B7 /* Versions */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B6467A9C21ACF4950047E1B7 /* Build configuration list for PBXAggregateTarget "Versions" */;
+			buildPhases = (
+				B6467A9F21ACF4A20047E1B7 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Versions;
+			productName = Versions;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		B654998E21829C85000C91C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B654998D21829C85000C91C1 /* AppDelegate.m */; };
 		B654999121829C85000C91C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B654999021829C85000C91C1 /* ViewController.m */; };
@@ -17,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B6467AA021ACF4B80047E1B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B654998121829C85000C91C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6467A9B21ACF4940047E1B7;
+			remoteInfo = Versions;
+		};
 		B65499A221829C87000C91C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B654998121829C85000C91C1 /* Project object */;
@@ -117,6 +138,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B6467AA121ACF4B80047E1B7 /* PBXTargetDependency */,
 			);
 			name = LifeInGuangZhou;
 			productName = LifeInGuangZhou;
@@ -150,6 +172,9 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Wei Sun Inc.";
 				TargetAttributes = {
+					B6467A9B21ACF4940047E1B7 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					B654998821829C85000C91C1 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -174,6 +199,7 @@
 			targets = (
 				B654998821829C85000C91C1 /* LifeInGuangZhou */,
 				B65499A021829C87000C91C1 /* LifeInGuangZhouTests */,
+				B6467A9B21ACF4940047E1B7 /* Versions */,
 			);
 		};
 /* End PBXProject section */
@@ -198,6 +224,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B6467A9F21ACF4A20047E1B7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${SRCROOT}/scripts/git_hash_to_versions.py\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B654998521829C85000C91C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -220,6 +266,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B6467AA121ACF4B80047E1B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6467A9B21ACF4940047E1B7 /* Versions */;
+			targetProxy = B6467AA021ACF4B80047E1B7 /* PBXContainerItemProxy */;
+		};
 		B65499A321829C87000C91C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B654998821829C85000C91C1 /* LifeInGuangZhou */;
@@ -247,6 +298,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B6467A9D21ACF4950047E1B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8S4LEN4P2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B6467A9E21ACF4950047E1B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8S4LEN4P2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		B65499A821829C87000C91C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -367,6 +436,8 @@
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = G8S4LEN4P2;
 				INFOPLIST_FILE = LifeInGuangZhou/Info.plist;
+				INFOPLIST_PREFIX_HEADER = Versions/versions.h;
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,6 +457,8 @@
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = G8S4LEN4P2;
 				INFOPLIST_FILE = LifeInGuangZhou/Info.plist;
+				INFOPLIST_PREFIX_HEADER = Versions/versions.h;
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,6 +511,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B6467A9C21ACF4950047E1B7 /* Build configuration list for PBXAggregateTarget "Versions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6467A9D21ACF4950047E1B7 /* Debug */,
+				B6467A9E21ACF4950047E1B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B654998421829C85000C91C1 /* Build configuration list for PBXProject "LifeInGuangZhou" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
