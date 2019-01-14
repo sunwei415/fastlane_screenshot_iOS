@@ -37,7 +37,12 @@ def test_git_hash_to_versions():
 
     is_archiving = os.environ['ACTION'] == 'install'
 
-    should_generate_versions_h = (is_archiving) or (xcode_configuration == 'Debug') or (not versions_file_is_legal)
+    use_previous_version = os.environ["USE_PREVIOUS_VERSIONS_H"]
+
+    if use_previous_version:
+        return
+
+    should_generate_versions_h = (xcode_configuration == 'Debug') or (not versions_file_is_legal)
     if not should_generate_versions_h:
         return
 
