@@ -45,7 +45,7 @@ def test_git_hash_to_versions():
                 version_code = a_line.split(define_gf_bundle_version)[-1].strip()
                 hash_decimal = re.split('[\\\.-]', version_code)[-1]
                 hash_in_versions_h = hex(int(hash_decimal)).split('x')[-1][1:]
-                versions_file_is_legal = versions_file_is_legal and (hash_in_versions_h == git_hash)
+                versions_file_is_legal = hash_in_versions_h == git_hash
                 break
 
     use_previous_version = "USE_PREVIOUS_VERSIONS_H" in os.environ and os.environ["USE_PREVIOUS_VERSIONS_H"] == "YES"
