@@ -64,7 +64,7 @@ def test_git_hash_to_versions():
     epoch_2018_8_1 = calendar.timegm(time.strptime(TW_BUNDLE_SHORT_VERSION_DATE, '%B %d %Y %H:%M:%S GMT'))
     epoch_now = calendar.timegm(time.gmtime())
 
-    minutes_since_date = (epoch_now - epoch_2018_8_1) / 1
+    minutes_since_date = (epoch_now - epoch_2018_8_1) / 60
 
     print(minutes_since_date)
 
