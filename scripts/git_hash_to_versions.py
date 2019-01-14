@@ -31,18 +31,13 @@ def test_git_hash_to_versions():
 
     versions_file_is_legal = False
 
-    is_one_minute_ago = True
-
     if versions_h_exists:
         versions_h_content = codecs.open(versions_file, encoding='utf8').read()
         versions_file_is_legal = define_gf_bundle_version in versions_h_content
-        last_modified = os.path.getmtime(versions_file)
-        current_timestamp = time.time()
-        is_one_minute_ago = current_timestamp - last_modified > 60
 
     is_archiving = os.environ['ACTION'] == 'install'
 
-    should_generate_versions_h = (is_archiving and is_one_minute_ago) or (xcode_configuration == 'Debug') or (not versions_file_is_legal)
+    should_generate_versions_h = (is_archiving) or (xcode_configuration == 'Debug') or (not versions_file_is_legal)
     if not should_generate_versions_h:
         return
 
