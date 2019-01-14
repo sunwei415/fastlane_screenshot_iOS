@@ -49,11 +49,16 @@ end
 
 platform :ios do
   desc "Push a new beta build to TestFlight"
-  lane :beta do
+  lane :online_beta do
 
     scheme = "LifeInGuangZhou"
 
     build_and_upload_to_testflight_with_scheme(scheme)
 
+  end
+  lane :test_beta do
+    scheme = "LifeInGuangZhou"
+
+    build_and_upload_to_testflight_with_scheme(scheme)
   end
 end
