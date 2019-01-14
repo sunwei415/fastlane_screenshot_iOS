@@ -85,3 +85,5 @@ def test_git_hash_to_versions():
 
 if __name__ == '__main__':
     test_git_hash_to_versions()
+    versions_h = codecs.open(get_path_for_versions_h(), encoding='utf8').read()
+    print(versions_h)
