@@ -49,16 +49,26 @@ end
 
 platform :ios do
   desc "Push a new beta build to TestFlight"
-  lane :online_beta do
+  lane :drone_online_beta do
 
     scheme = "LifeInGuangZhou"
 
     build_and_upload_to_testflight_with_scheme(scheme)
 
   end
-  lane :test_beta do
+  lane :drone_test_beta do
     scheme = "LifeInGuangZhou"
 
     build_and_upload_to_testflight_with_scheme(scheme)
+  end
+
+  lane :online_beta do
+    ENV["MANUAL_FASTLANE"] = "YES"
+    drone_online_beta
+  end
+
+  lane :test_beta do
+    ENV["MANUAL_FASTLANE"] = "YES"
+    drone_test_beta
   end
 end
