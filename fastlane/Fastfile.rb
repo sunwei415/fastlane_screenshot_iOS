@@ -43,8 +43,7 @@ def build_and_upload_to_testflight_with_scheme(scheme)
           }
       }
   )
-  #upload_to_testflight(skip_waiting_for_build_processing:true )
-  #reset_git_repo
+  upload_to_testflight(skip_waiting_for_build_processing:true )
 end
 
 platform :ios do

@@ -174,12 +174,15 @@
 				TargetAttributes = {
 					B6467A9B21ACF4940047E1B7 = {
 						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Manual;
 					};
 					B654998821829C85000C91C1 = {
 						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Manual;
 					};
 					B65499A021829C87000C91C1 = {
 						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Manual;
 						TestTargetID = B654998821829C85000C91C1;
 					};
 				};
@@ -301,7 +304,7 @@
 		B6467A9D21ACF4950047E1B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = G8S4LEN4P2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -310,7 +313,7 @@
 		B6467A9E21ACF4950047E1B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = G8S4LEN4P2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -432,7 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = G8S4LEN4P2;
 				INFOPLIST_FILE = LifeInGuangZhou/Info.plist;
@@ -453,7 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = G8S4LEN4P2;
 				INFOPLIST_FILE = LifeInGuangZhou/Info.plist;
@@ -474,7 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = G8S4LEN4P2;
 				INFOPLIST_FILE = LifeInGuangZhouTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -493,7 +496,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = G8S4LEN4P2;
 				INFOPLIST_FILE = LifeInGuangZhouTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
