@@ -37,7 +37,7 @@ def test_git_hash_to_versions():
 
     is_archiving = os.environ['ACTION'] == 'install'
 
-    use_previous_version = os.environ["USE_PREVIOUS_VERSIONS_H"]
+    use_previous_version = "USE_PREVIOUS_VERSIONS_H" in os.environ and os.environ["USE_PREVIOUS_VERSIONS_H"]
 
     if use_previous_version:
         return
