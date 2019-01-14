@@ -53,7 +53,9 @@ def test_git_hash_to_versions():
     if use_previous_version:
         return
 
-    should_generate_versions_h = (xcode_configuration == 'Debug') or (not versions_file_is_legal)
+    manual_fastlane = "MANUAL_FASTLANE" in os.environ and os.environ["MANUAL_FASTLANE"] == "YES"
+
+    should_generate_versions_h = (xcode_configuration == 'Debug') or (not versions_file_is_legal) or manual_fastlane
     if not should_generate_versions_h:
         return
 
