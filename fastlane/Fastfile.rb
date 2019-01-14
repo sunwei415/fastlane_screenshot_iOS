@@ -15,10 +15,45 @@
 
 default_platform(:ios)
 
+def build_and_upload_to_testflight_with_scheme(scheme)
+  app_identifier = CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)
+  ensure_git_status_clean
+  disable_automatic_code_signing
+  match(
+      type: 'appstore',
+      app_identifier: app_identifier,
+      readonly: true)
+
+  match(
+      type: 'development',
+      app_identifier: app_identifier,
+      readonly: true)
+
+  settings_to_override = {
+      :PROVISIONING_PROFILE_SPECIFIER => "match Development #{app_identifier}"
+  }
+
+  build_app(
+      scheme: scheme,
+      xcargs: settings_to_override,
+      export_method: "app-store",
+      export_options: {
+          provisioningProfiles: {
+              app_identifier => "match AppStore #{app_identifier}"
+          }
+      }
+  )
+  upload_to_testflight
+  reset_git_repo
+end
+
 platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    build_app(scheme: "LifeInGuangZhou")
-    upload_to_testflight(skip_waiting_for_build_processing: true)
+
+    scheme = "LifeInGuangZhou"
+
+    build_and_upload_to_testflight_with_scheme(scheme)
+
   end
 end
