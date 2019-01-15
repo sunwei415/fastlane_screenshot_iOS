@@ -92,15 +92,4 @@ platform :ios do
     drone_test_beta
   end
 
-  lane :upload do
-    upload_app_to_bugly(
-        file_path:"LifeInGuangZhou.app.dSYM.zip",
-        app_key:"52d1630f-be0a-4cab-8145-e4662b87446e",
-        app_id:"6e66df30b1",
-        app_identifier: "com.weisun.LifeInGuangZhou",
-        pid:"2",
-        title:"title",
-        desc:"description",
-        )
-  end
 end
