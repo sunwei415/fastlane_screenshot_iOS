@@ -47,7 +47,8 @@ def build_and_upload_to_testflight_with_scheme(scheme, bugly_app_key, bugly_app_
   )
 
   upload_app_to_bugly(
-      file_path: ipa_name,
+      file_path: "#{scheme}.app.dSYM.zip",
+      app_identifier:app_identifier,
       app_key: bugly_app_key,
       app_id: bugly_app_id,
       pid:"2",
