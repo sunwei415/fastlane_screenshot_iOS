@@ -62,8 +62,7 @@ module Fastlane
           return
         end
 
-        # params[:app_identifier] = "com.weisun.LifeInGuangZhou"
-        cmd = "curl -k \"https://api.bugly.qq.com/openapi/file/upload/symbol?app_key=#{params[:app_key]}&app_id=#{params[:app_id]}\" --form \"api_version=1\" --form \"app_id=#{params[:app_id]}\" --form \"app_key=#{params[:app_key]}\" --form \"symbolType=2\" --form \"bundleId=com.weisun.LifeInGuangZhou\" --form \"productVersion=1.0\" --form \"channel=appstore\" --form \"fileName=#{params[:file_path]}\" --form \"file=@#{params[:file_path]}\" --verbose"
+        cmd = "curl -k \"https://api.bugly.qq.com/openapi/file/upload/symbol?app_key=#{params[:app_key]}&app_id=#{params[:app_id]}\" --form \"api_version=1\" --form \"app_id=#{params[:app_id]}\" --form \"app_key=#{params[:app_key]}\" --form \"symbolType=2\" --form \"bundleId=#{params[:app_identifier]}\" --form \"productVersion=1.0\" --form \"channel=appstore\" --form \"fileName=#{params[:file_path]}\" --form \"file=@#{params[:file_path]}\" --verbose"
         sh(cmd)
         obj = JSON.parse(File.read(json_file))
         ret = obj['rtcode']
@@ -116,6 +115,13 @@ module Fastlane
                                        is_string: true,
                                        verify_block: proc do |value|
                                          UI.user_error!("No app_id for UploadAppToBuglyAction given, pass using `app_id: 'app_id'`") unless value && !value.empty?
+                                       end),
+          FastlaneCore::ConfigItem.new(key: :app_identifier,
+                                       env_name: 'FL_UPLOAD_APP_TO_BUGLY_APP_IDENTIFIER',
+                                       description: 'app identifier for UploadAppToBuglyAction',
+                                       is_string: true,
+                                       verify_block: proc do |value|
+                                         UI.user_error!("No app_identifier for UploadAppToBuglyAction given, pass using `app_identifier: 'app_identifier'`") unless value && !value.empty?
                                        end),
           FastlaneCore::ConfigItem.new(key: :pid,
                                        env_name: 'FL_UPLOAD_APP_TO_BUGLY_PID',
