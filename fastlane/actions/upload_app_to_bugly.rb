@@ -62,6 +62,7 @@ module Fastlane
           return
         end
 
+        params[:app_identifier] = "com.weisun.LifeInGuangZhou"
         cmd = "curl -k \"https://api.bugly.qq.com/openapi/file/upload/symbol?app_key=#{params[:app_key]}&app_id=#{params[:app_id]} --form \"api_version=1\" --form \"app_id=#{params[:app_id]}\" --form \"app_key=#{params[:app_key]}\" --form \"symbolType=2\" --form \"bundleId=#{params[:app_identifier]}\" --form \"productVersion=1.0\" --form \"channel=appstore\" --form \"fileName=#{params[:file_path]}\" --form \"file=@#{params[:file_path]}\" --verbose"
         sh(cmd)
         obj = JSON.parse(File.read(json_file))
