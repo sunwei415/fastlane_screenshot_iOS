@@ -93,7 +93,7 @@ platform :ios do
 
   lane :upload do
     upload_app_to_bugly(
-        file_path:"LifeInGuangZhou.ipa",
+        file_path:"LifeInGuangZhou.app.dSYM.zip",
         app_key:"52d1630f-be0a-4cab-8145-e4662b87446e",
         app_id:"6e66df30b1",
         pid:"2",
