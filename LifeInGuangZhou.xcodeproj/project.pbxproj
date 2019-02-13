@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		B61A2B1322142E1A00939C35 /* LifeInGuangZhouUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B61A2B1222142E1A00939C35 /* LifeInGuangZhouUITests.m */; };
 		B654998E21829C85000C91C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B654998D21829C85000C91C1 /* AppDelegate.m */; };
 		B654999121829C85000C91C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B654999021829C85000C91C1 /* ViewController.m */; };
 		B654999421829C85000C91C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B654999221829C85000C91C1 /* Main.storyboard */; };
@@ -31,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B61A2B1522142E1A00939C35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B654998121829C85000C91C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B654998821829C85000C91C1;
+			remoteInfo = LifeInGuangZhou;
+		};
 		B6467AA021ACF4B80047E1B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B654998121829C85000C91C1 /* Project object */;
@@ -48,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B61A2B1022142E1A00939C35 /* LifeInGuangZhouUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeInGuangZhouUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B61A2B1222142E1A00939C35 /* LifeInGuangZhouUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeInGuangZhouUITests.m; sourceTree = "<group>"; };
+		B61A2B1422142E1A00939C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B654998921829C85000C91C1 /* LifeInGuangZhou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeInGuangZhou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B654998C21829C85000C91C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B654998D21829C85000C91C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -64,6 +75,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B61A2B0D22142E1A00939C35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B654998621829C85000C91C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,11 +99,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B61A2B1122142E1A00939C35 /* LifeInGuangZhouUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B61A2B1222142E1A00939C35 /* LifeInGuangZhouUITests.m */,
+				B61A2B1422142E1A00939C35 /* Info.plist */,
+			);
+			path = LifeInGuangZhouUITests;
+			sourceTree = "<group>";
+		};
 		B654998021829C85000C91C1 = {
 			isa = PBXGroup;
 			children = (
 				B654998B21829C85000C91C1 /* LifeInGuangZhou */,
 				B65499A421829C87000C91C1 /* LifeInGuangZhouTests */,
+				B61A2B1122142E1A00939C35 /* LifeInGuangZhouUITests */,
 				B654998A21829C85000C91C1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +123,7 @@
 			children = (
 				B654998921829C85000C91C1 /* LifeInGuangZhou.app */,
 				B65499A121829C87000C91C1 /* LifeInGuangZhouTests.xctest */,
+				B61A2B1022142E1A00939C35 /* LifeInGuangZhouUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +156,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B61A2B0F22142E1A00939C35 /* LifeInGuangZhouUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B61A2B1922142E1A00939C35 /* Build configuration list for PBXNativeTarget "LifeInGuangZhouUITests" */;
+			buildPhases = (
+				B61A2B0C22142E1A00939C35 /* Sources */,
+				B61A2B0D22142E1A00939C35 /* Frameworks */,
+				B61A2B0E22142E1A00939C35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B61A2B1622142E1A00939C35 /* PBXTargetDependency */,
+			);
+			name = LifeInGuangZhouUITests;
+			productName = LifeInGuangZhouUITests;
+			productReference = B61A2B1022142E1A00939C35 /* LifeInGuangZhouUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		B654998821829C85000C91C1 /* LifeInGuangZhou */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B65499AA21829C87000C91C1 /* Build configuration list for PBXNativeTarget "LifeInGuangZhou" */;
@@ -172,6 +219,10 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Wei Sun Inc.";
 				TargetAttributes = {
+					B61A2B0F22142E1A00939C35 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B654998821829C85000C91C1;
+					};
 					B6467A9B21ACF4940047E1B7 = {
 						CreatedOnToolsVersion = 10.1;
 						ProvisioningStyle = Manual;
@@ -202,11 +253,19 @@
 				B654998821829C85000C91C1 /* LifeInGuangZhou */,
 				B65499A021829C87000C91C1 /* LifeInGuangZhouTests */,
 				B6467A9B21ACF4940047E1B7 /* Versions */,
+				B61A2B0F22142E1A00939C35 /* LifeInGuangZhouUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B61A2B0E22142E1A00939C35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B654998721829C85000C91C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,6 +306,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B61A2B0C22142E1A00939C35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B61A2B1322142E1A00939C35 /* LifeInGuangZhouUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B654998521829C85000C91C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,6 +335,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B61A2B1622142E1A00939C35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B654998821829C85000C91C1 /* LifeInGuangZhou */;
+			targetProxy = B61A2B1522142E1A00939C35 /* PBXContainerItemProxy */;
+		};
 		B6467AA121ACF4B80047E1B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B6467A9B21ACF4940047E1B7 /* Versions */;
@@ -300,6 +372,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B61A2B1722142E1A00939C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8S4LEN4P2;
+				INFOPLIST_FILE = LifeInGuangZhouUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.weisun.LifeInGuangZhouUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LifeInGuangZhou;
+			};
+			name = Debug;
+		};
+		B61A2B1822142E1A00939C35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8S4LEN4P2;
+				INFOPLIST_FILE = LifeInGuangZhouUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.weisun.LifeInGuangZhouUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LifeInGuangZhou;
+			};
+			name = Release;
+		};
 		B6467A9D21ACF4950047E1B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -517,6 +627,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B61A2B1922142E1A00939C35 /* Build configuration list for PBXNativeTarget "LifeInGuangZhouUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B61A2B1722142E1A00939C35 /* Debug */,
+				B61A2B1822142E1A00939C35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B6467A9C21ACF4950047E1B7 /* Build configuration list for PBXAggregateTarget "Versions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
