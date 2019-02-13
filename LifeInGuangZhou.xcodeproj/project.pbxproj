@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		B61A2B1322142E1A00939C35 /* LifeInGuangZhouUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B61A2B1222142E1A00939C35 /* LifeInGuangZhouUITests.m */; };
+		B61A2B1C22142F2B00939C35 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A2B1B22142F2B00939C35 /* SnapshotHelper.swift */; };
 		B654998E21829C85000C91C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B654998D21829C85000C91C1 /* AppDelegate.m */; };
 		B654999121829C85000C91C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B654999021829C85000C91C1 /* ViewController.m */; };
 		B654999421829C85000C91C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B654999221829C85000C91C1 /* Main.storyboard */; };
@@ -59,6 +60,8 @@
 		B61A2B1022142E1A00939C35 /* LifeInGuangZhouUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeInGuangZhouUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61A2B1222142E1A00939C35 /* LifeInGuangZhouUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeInGuangZhouUITests.m; sourceTree = "<group>"; };
 		B61A2B1422142E1A00939C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B61A2B1A22142F2B00939C35 /* LifeInGuangZhouUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LifeInGuangZhouUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		B61A2B1B22142F2B00939C35 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		B654998921829C85000C91C1 /* LifeInGuangZhou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeInGuangZhou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B654998C21829C85000C91C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B654998D21829C85000C91C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,8 +105,10 @@
 		B61A2B1122142E1A00939C35 /* LifeInGuangZhouUITests */ = {
 			isa = PBXGroup;
 			children = (
+				B61A2B1B22142F2B00939C35 /* SnapshotHelper.swift */,
 				B61A2B1222142E1A00939C35 /* LifeInGuangZhouUITests.m */,
 				B61A2B1422142E1A00939C35 /* Info.plist */,
+				B61A2B1A22142F2B00939C35 /* LifeInGuangZhouUITests-Bridging-Header.h */,
 			);
 			path = LifeInGuangZhouUITests;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				TargetAttributes = {
 					B61A2B0F22142E1A00939C35 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = B654998821829C85000C91C1;
 					};
 					B6467A9B21ACF4940047E1B7 = {
@@ -311,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B61A2B1322142E1A00939C35 /* LifeInGuangZhouUITests.m in Sources */,
+				B61A2B1C22142F2B00939C35 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +382,7 @@
 		B61A2B1722142E1A00939C35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8S4LEN4P2;
 				INFOPLIST_FILE = LifeInGuangZhouUITests/Info.plist;
@@ -386,6 +394,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.weisun.LifeInGuangZhouUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LifeInGuangZhouUITests/LifeInGuangZhouUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LifeInGuangZhou;
 			};
@@ -394,6 +405,7 @@
 		B61A2B1822142E1A00939C35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8S4LEN4P2;
 				INFOPLIST_FILE = LifeInGuangZhouUITests/Info.plist;
@@ -405,6 +417,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.weisun.LifeInGuangZhouUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LifeInGuangZhouUITests/LifeInGuangZhouUITests-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LifeInGuangZhou;
 			};

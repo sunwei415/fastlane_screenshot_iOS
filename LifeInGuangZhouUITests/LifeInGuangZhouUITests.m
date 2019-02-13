@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 
+#import "LifeInGuangZhouUITests-Swift.h"
+
 @interface LifeInGuangZhouUITests : XCTestCase
 
 @end
@@ -33,6 +35,8 @@
 - (void)testExample {
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    [Snapshot snapshot:@"main" timeWaitingForIdle:10];
 }
 
 @end
